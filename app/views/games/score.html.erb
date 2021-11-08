@@ -1,0 +1,18 @@
+<%# <% if @is_english_word == true %>
+<%# <h2>Good job! Your word is an english word</h2> %>
+<%# <% else %>
+<%# <h2>Sorry, you better start learning english </h2> %>
+<%# <% end %>
+<%= if @words_are_included == true %>
+<h2>Good job! Your characters are included</h2>
+<% else %>
+<h2>Sorry, you need new characters </h2>
+<% end %>
+<h2><%= link_to "Play again! 🚀", new_path%></h2>
+
+<%# if !@letters.include? params[:word].chars
+  @words_are_included = false
+# The word is valid according to the grid, but is not a valid English word
+elsif @words_are_included=true && @is_english_word = false
+# The word is valid according to the grid and is an English word
+elsif @words_are_included = true && @is_english_word = true %>
